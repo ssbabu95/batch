@@ -10,4 +10,4 @@ while True:
 		new_listing = json.loads(message.value.decode())
 		es.index(index='listing_index', doc_type='listing', id=new_listing['id'], body=new_listing)
 		es.indices.refresh(index="listing_index")
-		#print(new_listing)
+		print(new_listing)
